@@ -7,3 +7,7 @@ test('renders Marquee', () => {
   const linkElement = getByText(/brian.fish/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+test('respects tautologies', () => {
+    expect(true).toEqual(true);
+});
