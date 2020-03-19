@@ -1,7 +1,7 @@
-import { Location, Router, navigate } from '@reach/router';
+import { Router, navigate } from '@reach/router';
 import React from 'react';
+import Nav from './Nav';
 import './App.css';
-import Marquee from './Marquee';
 
 function Home() {
   return (
@@ -26,13 +26,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Location>
-          {({ location }) =>
-            <div>
-              <Marquee bigMode={ location.pathname === "/" } />
-            </div>
-          }
-        </Location>
+        <Nav />
+      </header>
       <div className="App-content">
         <Router>
           <Home path="/" />
@@ -40,7 +35,6 @@ function App() {
           <NotFound default />
         </Router>
       </div>
-      </header>
     </div>
   );
 }

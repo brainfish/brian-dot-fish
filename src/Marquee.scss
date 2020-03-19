@@ -1,0 +1,60 @@
+.Marquee {
+    box-shadow: inset 0px 0px 0px 4px blue;
+    display: block;
+    height: 20vmin;
+    width: 40vmin;
+
+    .Marquee-inner {
+        box-shadow: inset 0px 0px 0px 4px magenta;
+        height: 100%;
+        pointer-events: none;
+
+        a {
+            pointer-events: all;
+        }
+    }
+
+    .Marquee-split {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: -5;
+    }
+}
+
+.Marquee-logo {
+  height: 4vmin;
+  pointer-events: none;
+}
+
+.bigMode {
+    .Marquee-inner {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    .Marquee-logo {
+        height: 40vmin;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Marquee-logo {
+    animation: Marquee-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes Marquee-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
