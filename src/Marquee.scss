@@ -3,12 +3,22 @@
     display: block;
     height: 20vmin;
     width: 40vmin;
+    margin-right: auto;
 
     .Marquee-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         box-shadow: inset 0px 0px 0px 4px magenta;
-        height: 100%;
-        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20vmin;
+        width: 40vmin;
+        transition: width 1s, height 1s;
 
+        pointer-events: none;
         a {
             pointer-events: all;
         }
@@ -26,17 +36,15 @@
 }
 
 .Marquee-logo {
-  height: 4vmin;
-  pointer-events: none;
+    height: 4vmin;
+    pointer-events: none;
+    transition: width 1s, height 1s;
 }
 
 .bigMode {
     .Marquee-inner {
-        position: absolute;
         width: 100vw;
         height: 100vh;
-        top: 0;
-        left: 0;
     }
 
     .Marquee-logo {

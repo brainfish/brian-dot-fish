@@ -1,0 +1,16 @@
+.Nav {
+    box-shadow: inset 0px 0px 0px 5px red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    a {
+        color: #61dafb;
+
+        &.NavLink {
+            color: #fdfdfd;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import { Link, Location } from '@reach/router';
 import React from 'react';
 import Marquee from './Marquee';
-import './Nav.css';
+import './Nav.scss';
 
 const NavLink = ({ children, to }) =>
     <Link className="NavLink" to={to}>{children}</Link>

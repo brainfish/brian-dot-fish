@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(40, 44, 52, 0.6);
   min-height: 20vmin;
   max-height: 20vmin;
   display: flex;
@@ -12,12 +12,4 @@
   justify-content: start; */
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-header a {
-  color: gray;
-}
-
-.App-link {
-  color: #61dafb;
 }
