@@ -1,6 +1,5 @@
-import { Router, navigate } from '@reach/router';
+import { Location, Router, navigate } from '@reach/router';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Marquee from './Marquee';
 
@@ -27,8 +26,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Marquee />
+        <Location>
+          {({ location }) =>
+            <div>
+              <Marquee bigMode={ location.pathname === "/" } />
+            </div>
+          }
+        </Location>
       <div className="App-content">
         <Router>
           <Home path="/" />
