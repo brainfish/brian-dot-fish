@@ -1,0 +1,15 @@
+{
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-brian-dot-fish-production-190112-authRole",
+            "UnauthRoleArn": "arn:aws:iam::675638105443:role/amplify-brian-dot-fish-production-190112-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::675638105443:role/amplify-brian-dot-fish-production-190112-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-brian-dot-fish-production-190112-deployment",
+            "UnauthRoleName": "amplify-brian-dot-fish-production-190112-unauthRole",
+            "StackName": "amplify-brian-dot-fish-production-190112",
+            "StackId": "arn:aws:cloudformation:us-west-2:675638105443:stack/amplify-brian-dot-fish-production-190112/ad505da0-6a4e-11ea-9308-066f1b43b848",
+            "AmplifyAppId": "d37yygvqyrx1ug"
+        }
+    }
+}
