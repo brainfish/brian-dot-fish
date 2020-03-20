@@ -3,6 +3,7 @@ import React from 'react';
 import Nav from './Nav';
 import './App.scss';
 import bg from './assets/video-bg/avrocar-landing-concrete-groun.mp4'
+import bg2 from './assets/video-bg/avrocar-pilot-testing-avrocar-after-mo.mp4'
 
 function Home() {
   return (
@@ -38,7 +39,7 @@ function App() {
       </div>
       <div className="App-background">
         <video autoPlay={true} muted={true} loop={true} id={'video-bg'}>
-          <source src={bg} type="video/mp4" />
+          <source src={bg2} type="video/mp4" />
         </video>
       </div>
     </div>
