@@ -10,7 +10,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        box-shadow: inset 0px 0px 0px 4px magenta;
+        // box-shadow: inset 0px 0px 0px 4px magenta;
         position: absolute;
         top: 0;
         left: 0;
@@ -24,36 +24,43 @@
         }
     }
 
-    .Marquee-split {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: black;
-        z-index: -5;
-    }
-}
-
-.Marquee-logo {
-    height: 4vmin;
-    pointer-events: none;
-    transition: width 1s, height 1s;
-}
-
-.bigMode {
-    .Marquee-inner {
-        width: 100vw;
-        height: 100vh;
-    }
-
     .Marquee-logo {
-        height: 40vmin;
+        width: 40vmin;
+        height: auto;
+        pointer-events: none;
+        transition: width 1s, height 1s;
     }
+
+    &.bigMode {
+        pointer-events: none;
+
+        .Marquee-inner {
+            width: 100vw;
+            height: 100vh;
+            a {
+                pointer-events: none;
+            }
+        }
+
+        .Marquee-logo {
+            width: 90vw;
+            // height: 100vmin;
+        }
+    }
+
+    // .Marquee-split {
+    //     width: 50%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     background-color: black;
+    //     z-index: -5;
+    // }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .Marquee-logo {
+  .Marquee-logo.spin {
     animation: Marquee-logo-spin infinite 20s linear;
   }
 }
