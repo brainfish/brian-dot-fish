@@ -1,4 +1,6 @@
 .App {
+  // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
 
@@ -13,6 +15,8 @@
 }
 
 .App-background {
+  display: flex;
+  justify-content: center;
 
   overflow: hidden;
   position: absolute;
@@ -25,9 +29,9 @@
 
   video {
     position: absolute;
-    width: 300vw;
-    height: 300vh;
-    left: -100vw;
-    top: -100vh;
+    // width: 300vw;
+    // left: -100vw;
+    height: 200vh;
+    top: -50vh;
   }
 }

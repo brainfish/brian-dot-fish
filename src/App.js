@@ -1,9 +1,13 @@
-import { Router, navigate } from '@reach/router';
+import { Router } from '@reach/router';
 import React from 'react';
 import Nav from './Nav';
 import './App.scss';
-import bg from './assets/video-bg/avrocar-landing-concrete-groun.mp4'
-import bg2 from './assets/video-bg/avrocar-pilot-testing-avrocar-after-mo.mp4'
+// eslint-disable-next-line
+import bg from './assets/video-bg/avrocar-landing-concrete-groun.mp4';
+import bg2 from './assets/video-bg/avrocar-pilot-testing-avrocar-after-mo.mp4';
+import About from './pages/About';
+import { NotFound } from './pages/Error';
+import Reddit from './pages/Reddit';
 
 function Home() {
   return (
@@ -11,18 +15,6 @@ function Home() {
   );
 }
 
-function About() {
-  const logoNavigate = event => {
-    event.preventDefault();
-    navigate("/404");
-  }
-
-  return (
-    <div onClick={logoNavigate} class="About">Not much to say about me, yet.</div>
-  );
-}
-
-const NotFound = () => <h1>Sorry, nothing here.</h1>
 
 function App() {
   return (
@@ -34,6 +26,7 @@ function App() {
         <Router>
           <Home path="/" />
           <About path="/about" />
+          <Reddit path="/reddit" />
           <NotFound default />
         </Router>
       </div>

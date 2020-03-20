@@ -13,6 +13,7 @@ const Nav = () =>
             <div className="Nav">
                 <Marquee bigMode={location.pathname === "/"} />
                 <NavLink to="/about"><h2>About</h2></NavLink>
+                <NavLink to="/reddit"><h2>Reddit</h2></NavLink>
             </div>
         }
     </Location>

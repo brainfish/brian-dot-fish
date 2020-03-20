@@ -11,6 +11,14 @@
 
         &.NavLink {
             color: #fdfdfd;
+            text-decoration: none;
+            // transform: rotate(90deg);
+        }
+    }
+
+    .NavLink {
+        h2 {
+            font-size: 0.825em;
         }
     }
 }
