@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { Link, Location } from '@reach/router';
 import React from 'react';
 import Marquee from './Marquee';
@@ -10,11 +11,16 @@ const NavLink = ({ children, to }) =>
 const Nav = () =>
     <Location>
         {({ location }) =>
-            <div className="Nav">
-                <Marquee bigMode={location.pathname === "/"} />
-                <NavLink to="/about"><h2>About</h2></NavLink>
-                <NavLink to="/reddit"><h2>Reddit</h2></NavLink>
-            </div>
+            {
+                const bigMode = location.pathname === "/"
+                return (
+                    <div className={cx("Nav", {"high-vis": !bigMode})}>
+                        <Marquee bigMode={bigMode} />
+                        <NavLink to="/about"><h2>About</h2></NavLink>
+                        <NavLink to="/reddit"><h2>Reddit</h2></NavLink>
+                    </div>
+                );
+            }
         }
     </Location>
 

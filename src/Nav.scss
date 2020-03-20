@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+    transition: all 1s;
+
+    &.high-vis {
+        background-color: rgba(40, 44, 52, 0.8);
+    }
 
     a {
         color: #61dafb;
@@ -12,6 +17,7 @@
         &.NavLink {
             color: #fdfdfd;
             text-decoration: none;
+            margin-right: 1em;
             // transform: rotate(90deg);
         }
     }

@@ -11,7 +11,7 @@ import Reddit from './pages/Reddit';
 
 function Home() {
   return (
-    <div class="Home">Welcome home!</div>
+    <div class="Home"></div>
   );
 }
 

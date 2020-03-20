@@ -5,13 +5,28 @@
 }
 
 .App-header {
-  background-color: rgba(40, 44, 52, 0.6);
   min-height: 20vmin;
   max-height: 20vmin;
   display: flex;
   flex-direction: row;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-content {
+  color: white;
+  // box-shadow: inset 0px 0px 0px 4px blue;
+  position: relative;
+  // height: calc(100vh - 50vmin);
+  font-size: calc(10px + 4vmin);
+  // margin-top: 2em;
+  // top: 10vmin;
+  height: calc(100vh - 20vmin);
+  bottom: 0;
+  overflow: hidden;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  box-sizing: border-box;
 }
 
 .App-background {
