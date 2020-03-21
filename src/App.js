@@ -1,9 +1,11 @@
 import { Router } from '@reach/router';
 import React from 'react';
+import Background from './Background';
 import Nav from './Nav';
 import './App.scss';
 // eslint-disable-next-line
 import bg from './assets/video-bg/avrocar-landing-concrete-groun.mp4';
+// eslint-disable-next-line
 import bg2 from './assets/video-bg/avrocar-pilot-testing-avrocar-after-mo.mp4';
 import About from './pages/About';
 import { NotFound } from './pages/Error';
@@ -30,11 +32,16 @@ function App() {
           <NotFound default />
         </Router>
       </div>
-      <div className="App-background">
-        <video autoPlay={true} muted={true} loop={true} id={'video-bg'}>
+      <Router className="App-background">
+        <Background path="/" />
+        <Background path="/about" />
+        <Background path="/reddit" />
+        <NotFound default />
+      </Router>
+        {/* <Background /> */}
+        {/* <video autoPlay={true} muted={true} loop={true} id={'video-bg'}>
           <source src={bg2} type="video/mp4" />
-        </video>
-      </div>
+        </video> */}
     </div>
   );
 }

@@ -11,7 +11,6 @@ function Marquee({ bigMode }) {
         <Link to="/">
           <img src={logo} className="Marquee-logo" alt="logo" />
         </Link>
-        {/* <Link to="/"><h1>brian.fish</h1></Link> */}
       </div>
     </div>
   );
