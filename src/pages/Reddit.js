@@ -2,7 +2,7 @@ import React from 'react';
 
 const Reddit = () => {
     return (
-        <div class="Reddit">
+        <div className="Reddit">
             Reddit!
         </div>
     )

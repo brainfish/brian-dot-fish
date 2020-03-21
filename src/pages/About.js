@@ -8,7 +8,7 @@ function About() {
   }
 
   return (
-    <div onClick={logoNavigate} class="About">Not much to say about me, yet.</div>
+    <div onClick={logoNavigate} className="About">Under construction.</div>
   );
 }
 
