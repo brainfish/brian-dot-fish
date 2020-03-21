@@ -48,7 +48,7 @@ class BackgroundArt extends React.Component {
 
 class Background extends React.Component {
     render() {
-        return <Location>
+        return <Location className="Background">
             {({ location }) => {
                 return (
                     <BackgroundArt key={location.pathname} path={location.pathname} />

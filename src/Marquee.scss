@@ -35,8 +35,9 @@
         pointer-events: none;
 
         .Marquee-inner {
-            width: 95vw;
-            height: 95vh;
+            width: 97vw;
+            height: 97vh;
+            padding-left: 1vw;
             a {
                 pointer-events: none;
             }
@@ -44,6 +45,7 @@
 
         .Marquee-logo {
             width: 90vw;
+            left: 5vw;
             // height: 100vmin;
         }
     }
