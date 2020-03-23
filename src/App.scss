@@ -1,3 +1,7 @@
+body {
+  background-color: #0d0d0d;
+}
+
 .App {
   // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-family: 'Courier New', Courier, monospace;
@@ -23,7 +27,7 @@
   // top: 10vmin;
   height: calc(100vh - 20vmin);
   bottom: 0;
-  overflow: hidden;
+  overflow: auto;
   padding-top: 1em;
   padding-bottom: 2em;
   box-sizing: border-box;

@@ -1,6 +1,7 @@
 import { Location } from '@reach/router';
 import React from 'react';
 
+import './Background.css';
 import bg from './assets/video-bg/avrocar-landing-concrete-groun.mp4';
 import bg2 from './assets/video-bg/avrocar-pilot-testing-avrocar-after-mo.mp4';
 import bg3 from './assets/video-bg/044609936-astronauts-greeting-window-mob.mp4';
@@ -38,11 +39,11 @@ class BackgroundArt extends React.Component {
         var videoTimer = document.getElementById("video-bg");
         videoTimer.play();
         console.log('we tried');
-        const again = () => {
-            videoTimer.play();
-            console.log('we tried again');
-        }
-        setTimeout(again, 3000);
+        // const again = () => {
+        //     videoTimer.play();
+        //     console.log('we tried again');
+        // }
+        // setTimeout(again, 3000);
     }
 }
 

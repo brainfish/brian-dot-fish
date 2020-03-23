@@ -20,10 +20,10 @@ const RedditPostList = ({ posts }) => {
     </div>
 }
 
-const testposts = [
-    {"title": "No corporate bailouts!! Direct financial resources to the working people, not the capitalist elite!", "url": "http://www.wsws.org/en/articles/2020/03/23/pers-m23.html", "author": "exgalactic", "ups": 7132},
-    {"title": "gqless: GraphQL client without queries", "url": "https://gqless.netlify.com/", "author": "shinework", "ups": 182}
-]
+// const testposts = [
+//     {"title": "No corporate bailouts!! Direct financial resources to the working people, not the capitalist elite!", "url": "http://www.wsws.org/en/articles/2020/03/23/pers-m23.html", "author": "exgalactic", "ups": 7132},
+//     {"title": "gqless: GraphQL client without queries", "url": "https://gqless.netlify.com/", "author": "shinework", "ups": 182}
+// ]
 
 class Reddit extends React.Component {
     constructor(props) {
@@ -36,7 +36,6 @@ class Reddit extends React.Component {
     }
 
     fetchPosts() {
-        const that = this;
         fetch(API_URL)
             .then(response => response.json())
             .then(data => this.receivePosts(data));

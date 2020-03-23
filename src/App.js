@@ -2,6 +2,7 @@ import cx from 'classnames';
 import { Router } from '@reach/router';
 import React from 'react';
 import Background from './Background';
+import BackgroundFader from './BackgroundFader';
 import Nav from './Nav';
 import './App.scss';
 // eslint-disable-next-line
@@ -29,7 +30,7 @@ function AppRouter({ className }) {
             <NotFound default />
       </Router>
       <div className="App-background">
-        <Background />
+        <BackgroundFader />
       </div>
     </div>
   );
