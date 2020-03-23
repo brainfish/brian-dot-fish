@@ -1,0 +1,5 @@
+.RedditPostList {
+    font-size: 3vmin;
+    overflow: scroll;
+    height: auto;
+}
