@@ -4,13 +4,19 @@ import './Reddit.css';
 const API_URL = "https://api.brian.fish/reddit";
 
 const RedditPost = ({
-    author,
+    // author,
     title,
-    ups,
-    url
+    // ups,
+    url,
+    // subreddit_name_prefixed,
+    // subreddit_url,
+    // num_comments,
+    // permalink
 }, key) => {
     return <div className="RedditPost" key={`reddit-post-${key}`}>
-        <a href={url}>{title}</a> by {author} ({ups} upvotes)
+        <a href={url}>{title}</a> by {/*{author}{" "}*/}
+        {/* to <a href={subreddit_url}>{subreddit_name_prefixed}</a> 
+        (<a href={permalink}>{num_comments} comments</a>) ({ups} upvotes) */}
     </div>
 }
 

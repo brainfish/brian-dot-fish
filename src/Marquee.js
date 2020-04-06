@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React from 'react';
 import { Link } from '@reach/router';
-import logo from './assets/brian.fish-01-trim.png';
+import logo from './assets/brian.fish logo.png';
 import './Marquee.scss';
 
 function Marquee({ bigMode }) {
