@@ -35,9 +35,8 @@
         pointer-events: none;
 
         .Marquee-inner {
-            width: 97vw;
-            height: 97vh;
-            padding-left: 1vw;
+            width: 100vw;
+            height: 100vh;
             a {
                 pointer-events: none;
             }
@@ -45,33 +44,8 @@
 
         .Marquee-logo {
             width: 90vw;
+            max-width: calc(90vh * 1090 / 627);
             left: 5vw;
-            // height: 100vmin;
         }
     }
-
-    // .Marquee-split {
-    //     width: 50%;
-    //     height: 100%;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     background-color: black;
-    //     z-index: -5;
-    // }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .Marquee-logo.spin {
-    animation: Marquee-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes Marquee-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

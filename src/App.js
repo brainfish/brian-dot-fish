@@ -18,7 +18,7 @@ function Home() {
 function AppRouter({ className }) {
   return (
     <div className="AppRouter">
-      <Router className={cx("AppRouter-inner", className)}>
+      <Router className={cx("AppRouter-inner", className)} primary={false}>
             <Home path="/" />
             <About path="/about" />
             <Reddit path="/reddit" />
