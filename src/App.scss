@@ -48,9 +48,8 @@ body {
 
   video {
     position: absolute;
-    // width: 300vw;
-    // left: -100vw;
-    height: 200vh;
-    top: -50vh;
+    transition: opacity 2s ease-in-out;
+    width: 100vw;
+    min-width: calc(100vh * 4 / 3)
   }
 }

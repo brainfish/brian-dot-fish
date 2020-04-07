@@ -2,23 +2,25 @@ import { Location } from '@reach/router';
 import React from 'react';
 
 import './Background.css';
-import bg from './assets/video-bg/avrocar-landing-concrete-groun.mp4';
-import bg2 from './assets/video-bg/avrocar-pilot-testing-avrocar-after-mo.mp4';
-import bg3 from './assets/video-bg/044609936-astronauts-greeting-window-mob.mp4';
+import bg_avrocar1 from './assets/video-bg/avrocar-pilot-testing.mp4';
+import bg_avrocar2 from './assets/video-bg/avrocar-landing-concrete.mp4';
+import bg_astronauts from './assets/video-bg/astronauts-greeting-window.mp4';
+import bg_explosion from './assets/video-bg/explosion-taking-place.mp4';
 
 const backgrounds = {
-    'about': bg3,
-    'reddit': bg,
-    'default': bg2
+    'about': bg_astronauts,
+    'reddit': bg_avrocar2,
+    '': bg_avrocar1,
+    '404': bg_explosion,
+    'SENTINEL_default': bg_avrocar2
 };
 
-const get_background = (pathname) => {
-    const trimmed_pathname = pathname.replace(/^\/+|\/+$/g, '');
-    // console.log('pathname: %o trimmed: %o in?: %o', pathname, trimmed_pathname, trimmed_pathname in backgrounds);
-    if (trimmed_pathname in backgrounds) {
-        return backgrounds[trimmed_pathname];
+const getBackground = (pathname) => {
+    const trimmedPathname = pathname.replace(/^\/+|\/+$/g, '');
+    if (trimmedPathname in backgrounds) {
+        return backgrounds[trimmedPathname];
     }
-    return backgrounds['default'];
+    return backgrounds['SENTINEL_default'];
 }
 
 class BackgroundArt extends React.Component {
@@ -28,32 +30,24 @@ class BackgroundArt extends React.Component {
             active: false,
             loading: true
         }
-        this.handleVideoLoaded = this.handleVideoLoaded.bind(this);
     }
 
-
-    // componentDidMount(){
-    //     var videoTimer = document.getElementById("video-bg");
-    //     videoTimer.play();
-    //     console.log('we tried');
-    // }
     componentDidMount() {
-        const component = this;
         if (this.video) {
-            this.video.addEventListener("loadeddata", component.handleVideoLoaded);
+            this.video.addEventListener("loadeddata", this.handleVideoLoaded);
         }
     }
 
     componentWillUnmount() {
-        const component = this;
         if (this.video) {
-            this.video.removeEventListener("loadeddata", component.handleVideoLoaded);
+            this.video.removeEventListener("loadeddata", this.handleVideoLoaded);
         }
     }
 
-    handleVideoLoaded() {
-        console.log('DONE LOADING!');
-        this.setState({ loading: false });
+    handleVideoLoaded = () => {
+        this.setState({
+            loading: false
+        });
     }
 
     render() {
@@ -65,12 +59,10 @@ class BackgroundArt extends React.Component {
                 id={'video-bg'}
                 ref={ref => (this.video = ref)}
                 style={{
-                    // position: "fixed"
                     opacity: this.state.loading ? 0 : 1,
-                    transition: 'opacity, 2s ease-in-out'
                 }}
             >
-                <source src={get_background(this.props.path)} type="video/mp4" />
+                <source src={getBackground(this.props.path)} type="video/mp4" />
             </video>
        )
     }
