@@ -7,6 +7,7 @@ import './App.scss';
 import About from './pages/About';
 import { NotFound } from './pages/Error';
 import Reddit from './pages/Reddit';
+import Test from './pages/Test';
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function AppRouter({ className }) {
             <Home path="/" />
             <About path="/about" />
             <Reddit path="/reddit" />
+            <Test path="/test" />
             <NotFound default />
       </Router>
       <div className="App-background">

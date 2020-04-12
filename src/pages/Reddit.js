@@ -1,4 +1,5 @@
 import React from 'react';
+import ContentBox from '../components/ContentBox';
 import './Reddit.css';
 
 const API_URL = "https://api.brian.fish/reddit";
@@ -48,10 +49,10 @@ class Reddit extends React.Component {
 
     render() {
         return (
-            <div className="Reddit">
+            <ContentBox className="Reddit">
                 Reddit!
                 <RedditPostList posts={this.state.posts} />
-            </div>
+            </ContentBox>
         )
     }
 }

@@ -17,6 +17,7 @@
         height: 20vmin;
         width: 40vmin;
         transition: width 1s, height 1s;
+        z-index: 999;
 
         pointer-events: none;
         a {
@@ -29,6 +30,7 @@
         height: auto;
         pointer-events: none;
         transition: width 1s, height 1s;
+        z-index: 999;
     }
 
     &.bigMode {

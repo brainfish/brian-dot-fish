@@ -72,6 +72,8 @@ class Background extends React.Component {
     render() {
         return <Location className="Background">
             {({ location }) => {
+                console.log('LOCATION: %o', location);
+                window.BRIAN = location;
                 return (
                     <BackgroundArt key={location.pathname} path={location.pathname} />
                 );
