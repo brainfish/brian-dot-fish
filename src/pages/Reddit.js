@@ -15,7 +15,7 @@ const RedditPost = ({
     permalink
 }, key) => {
     return <div className="RedditPost" key={`reddit-post-${key}`}>
-        <a href={url}>{title}</a> by {author}{" "}
+        <a href={url}>{title}</a> by <a href={`https://reddit.com/u/${author}`}>{author}</a>{" "}
         to <a href={subreddit_url}>{subreddit_name}</a> 
         (<a href={permalink}>{num_comments} comments</a>) ({upvotes} upvotes)
     </div>

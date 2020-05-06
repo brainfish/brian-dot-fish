@@ -32,6 +32,7 @@ function AppRouter({ className }) {
     </div>
   );
 }
+
 function App() {
   return (
     <div className="App">
