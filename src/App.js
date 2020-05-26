@@ -8,6 +8,7 @@ import About from './pages/About';
 import { NotFound } from './pages/Error';
 import Reddit from './pages/Reddit';
 import Test from './pages/Test';
+import Wedding from './pages/Wedding';
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function AppRouter({ className }) {
             <About path="/about" />
             <Reddit path="/reddit" />
             <Test path="/test" />
+            <Wedding path="/wedding" />
             <NotFound default />
       </Router>
       <div className="App-background">

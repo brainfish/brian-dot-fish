@@ -18,7 +18,7 @@ const Nav = () =>
                         <Marquee bigMode={bigMode} />
                         <NavLink to="/about"><h2>About</h2></NavLink>
                         <NavLink to="/reddit"><h2>Reddit</h2></NavLink>
-                        <NavLink to="/test"><h2>Test</h2></NavLink>
+                        <NavLink to="/wedding"><h2>Wedding</h2></NavLink>
                     </div>
                 );
             }
